@@ -1,23 +1,30 @@
-#include<stdio.h>
+#include <iostream>
+#include <cstdlib>
+#include <sys/time.h>
+using namespace std;
 
-/* Function to calculate x raised to the power y */
-int power(int x, unsigned int y)
-{
-    if( y == 0)
-        return 1;
-    else if (y%2 == 0)
-        return power(x, y/2)*power(x, y/2);
-    else
-        return x*power(x, y/2)*power(x, y/2);
+float power(float x, int y);
 
-}
-
-/* Program to test function power */
 int main()
 {
-    int x = 2;
-    unsigned int y = 3;
+    float x = -2;
+    int y = -5;
+    cout<<power(x, y);
+}
 
-    printf("%d", power(x, y));
-    return 0;
+float power(float x, int y)
+{
+    float temp;
+    if( y == 0)
+        return 1;
+    temp = power(x, y/2);
+    if (y%2 == 0)
+        return temp*temp;
+    else
+    {
+        if(y > 0)
+            return x*temp*temp;
+        else
+            return temp*temp/x;
+    }
 }

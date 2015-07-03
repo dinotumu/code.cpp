@@ -8,6 +8,8 @@
 
 // single line
 #define compare(x,y)  (x<y?-1:(x==y)?0:1)
+// you can define swap function in this way too
+#define swap(x,y) int t; t=x; x=y; y=t;
 
 using namespace std;
 
