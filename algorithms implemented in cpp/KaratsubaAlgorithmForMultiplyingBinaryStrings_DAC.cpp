@@ -83,6 +83,6 @@ long int multiply(string X, string Y)
         long int P3 = multiply(addBitStrings(Xl, Xr), addBitStrings(Yl, Yr));
 
         // Combine the three products to get the final result.
-        return P1*(1<<(2*sh)) + (P3 - P1 - P2)*(1<<sh) + P2;
+        return P1*(1<<(n)) + (P3 - P1 - P2)*(1<<sh) + P2;
     }
 }

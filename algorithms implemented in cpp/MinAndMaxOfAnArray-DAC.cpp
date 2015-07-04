@@ -1,4 +1,4 @@
-// Simple linear search method and Tournament Method
+// Simple linear search method and DAC method
 #include <iostream>
 #include <cstdlib>
 #include <sys/time.h>
