@@ -1,4 +1,3 @@
-// Simple linear search method and DAC method
 #include <iostream>
 #include <cstdlib>
 #include <sys/time.h>
