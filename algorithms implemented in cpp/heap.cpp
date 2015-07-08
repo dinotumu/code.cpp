@@ -1,14 +1,14 @@
 #include <iostream>
 #include <cstdlib>
 #include <sys/time.h>
-#define size 100
+#define size_for_initialisation 100
 using namespace std;
 
 class minHeap
 {
 private:
-    int heap[size];
-    int nHeap;
+    int heap[size_for_declaring];
+    int index_of_heap;
     void minHeapify();
 
 public:
@@ -27,25 +27,31 @@ public:
 
 int minHeap::size()
 {
-    return nHeap;
+    return index_of_heap;
 }
 
 void minHeap::createHeap()
 {
-    heap[size] = {0};
-    nHeap = 0;
+    heap[size_for_initialisation] = {0};
+    index_of_heap = 0;
 }
 
 void minHeap::insert(int element)
 {
-    nHeap++;
-    heap[nHeap] = element;
+    index_of_heap++;
+    heap[index_of_heap] = element;
     buildMinHeap();
 }
 
 void minHeap::buildMinHeap()
 {
 
+}
+
+void minHeap::deleteMin()
+{
+    swap(heap[1], heap[index_of_heap--]);
+    buildMaxHeap();
 }
 
 int main()
