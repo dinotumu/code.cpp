@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-#include <sys/time.h>
 using namespace std;
 
 float power(float x, int y);
